@@ -14,14 +14,14 @@ import { useState } from 'react';
 // }
 
 const App = () => {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(5)
   
   // setTimeout(
   //   () => setCounter(counter + 15),
     
   //   1000)
   const handleClick = () => {
-    setCounter(counter+1)
+    setCounter(count+1)
   }
   return (
     <>
