@@ -3,7 +3,10 @@ import { useState } from 'react';
 
 
 
-const App=() => {
+const App = () => {
+  
+
+
   const [counter, setCounter] = useState(0)
 
   const increaseByOne = () => setCounter(counter + 1)
@@ -17,7 +20,13 @@ const App=() => {
   const setToZero=()=> setCounter(0)
   return (
     <div>
-      <div>{counter}</div>
+      {/* <div>{values}</div> */}
+      {/* <button >Hellooooooooo</button>
+      <button >2Hellooooooooo</button>
+ */}
+      <div>{ counter}</div>
+      
+
       <button onClick={increaseByOne}>plus</button>
       <button onClick={setToSeven}>SEVEN</button>
     
