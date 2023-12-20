@@ -2,7 +2,7 @@ import React from 'react'; // Added import statement for React
 import { useState } from 'react';
 
 
-//Exercise 1 Create Feedback System
+//Exercise 3 Create Feedback System
 
 const App = () => {
 
