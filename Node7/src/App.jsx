@@ -1,11 +1,11 @@
 import React from 'react'; // exercise1
 import { useState } from 'react';
 
-const App1 =()=>{
+const App =()=>{
    const [good,setGood] = useState(0)
     const [neutral,setNeutral] = useState(0)
     const [bad,setBad] = useState(0)
-    let total=good+neutral+bad
+    // let total=good+neutral+bad
 
     return(
         <div>
@@ -27,6 +27,6 @@ const App1 =()=>{
          </div>
     )
 }
-export default App1
+export default App
 
 
