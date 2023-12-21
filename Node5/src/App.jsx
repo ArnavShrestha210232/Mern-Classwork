@@ -11,53 +11,51 @@ const App = () => {
   //   // <><div><p>Hello2</p></div></>
     
   // )
-   const [counter, setCounter] = useState(0)
+  //  const [counter, setCounter] = useState(0)
 
-  const [good, setGood] = useState(0)
-  const [neutral, setNeutral] = useState(0)
-  const [bad, setBad] = useState(0)
+  const [value, setValue] = useState(0)
 
-  if (good === 6) {
-    return (
-     <div>The Grade is good</div> 
-    )
+
+  // if (good === 6) {
+  //   return (
+  //    <div>The Grade is good</div>
+  //   )
+  // }
+  
+  const handleClick = () => {
+    setValue(value + 1)
+    
   }
 
-  if (neutral === 2) {
-    return (
-     <div>The Grade is Neutral</div> 
-    )
-  }
 
-  if (bad === -5) {
-    return (
-     <div>The Grade is Bad</div> 
-    )
-  }
 
-  const handleGoodClick = () => {
-   setGood(good+1)
-  }
-
-  const handleNeutralClick = () => {
-   setNeutral(neutral+1)
-  }
-
-  const handleBadClick = () => {
-   setBad(bad-1)
-  }
   return(
     <div>
       <h1>Give Feedback</h1>
-      {good}   {neutral}    {bad}
+    
+      
+     {value}
       <br />
-      <button onClick={handleGoodClick}>Good</button>
-      <button onClick={handleNeutralClick}>Neutral</button>
-      <button onClick={handleBadClick}>Bad</button>
+      
+      <button onClick={handleClick}>Check Grade</button>
+      {/* <button onClick={handleNeutralClick}>Neutral</button>
+      <button onClick={handleBadClick}>Bad</button> */}
+
+      <hr />
+
+      <div> 
+        <h1>The grade is :</h1>
+        {
+          value >= 6 ? <p>Good</p> : <p>Bad</p> &&
+          value == 0 ? <p>Neutral</p> : <p>Bad</p>
+        }
+
+      </div>
+    
+     
 </div>
   )
   
 }
 
 export default App
-

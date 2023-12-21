@@ -1,7 +1,7 @@
 import React from 'react'; // exercise2
 import { useState } from 'react';
 
-
+// The following code is similiar to exercise 1 but in this code below we use a formulae to get the percentage of the value good, bad, and neutral
 const App =()=>{
    const [good,setGood] = useState(0)
     const [neutral,setNeutral] = useState(0)
@@ -19,7 +19,8 @@ const App =()=>{
             setNeutral(neutral+1)}>neutral</button>
 
             <button onClick ={()=>
-            setBad(bad+1)}>bad</button>
+                setBad(bad + 1)}>bad</button>
+            
             <h4><strong>Statistics</strong></h4>
             <p>good:{good}</p>
             <p>neutral:{neutral}</p>

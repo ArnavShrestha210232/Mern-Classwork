@@ -1,10 +1,11 @@
-import React from 'react'; // exercise1
+import React from 'react'; // exercise1 
 import { useState } from 'react';
 
 const App =()=>{
-   const [good,setGood] = useState(0)
-    const [neutral,setNeutral] = useState(0)
-    const [bad,setBad] = useState(0)
+    const [good, setGood] = useState(0)  // this code specifies that setGood function which has good value is at first 0. 
+   //And at line 14 the setGood function is called and the value good + 1 is written to add value 1 after each click
+    const [neutral,setNeutral] = useState(0) // Same as good
+    const [bad,setBad] = useState(0)// same as good
     // let total=good+neutral+bad
 
     return(
