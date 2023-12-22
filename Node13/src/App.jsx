@@ -1,16 +1,22 @@
-import { useState } from "react";
-import Note from './components/Note'
+import { useState } from "react"; //Exercise1
 
-const App = (props) => {
-  const [notes, setNotes] = useState(props.notes)
-
+const App = () => {
+  const [persons, setPersons] = useState([{ name: 'Hari' }, { name: 'Ram' }])
+  const addNote = (event) => {
+    console.log(event)
+  }
+  const handleChange = (event) => {
+    console.log(event.target.value)
+    console.log(event.target.value)
+  }
   return (
-    <div>
-      <h1>Notes</h1>
-      <ul>{notes.map(note =>
-        <Note key={note.id} note={note} />
-      )}
-      </ul>
+    <div><form onSubmit={addNote}>
+      <input onChange={handleChange} value={newPerson} type="text"></input>
+      <button type="submit">Add</button>
+    </form>
+      {persons.map((person) => (
+        <p key={person.id}>{person.name}</p>
+    ))}
     </div>
   )
 }
